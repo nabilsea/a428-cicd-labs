@@ -20,8 +20,8 @@ pipeline {
             steps {
                 sh './jenkins/scripts/deliver.sh' 
                 input message: 'Lanjutkan ke tahap Deploy?'
+		sh 'sleep 1m'
                 sh './jenkins/scripts/kill.sh'
-		sh 'sleep 1m' 
             }
         }
     }
